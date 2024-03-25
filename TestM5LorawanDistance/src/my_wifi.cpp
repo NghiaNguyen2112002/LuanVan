@@ -285,5 +285,6 @@ void WF_NTP_Init(void){
 String WF_NTP_GetDateTime(void){
     timeClient.update();
     // Serial.println(timeClient.getFormattedTime());
-    return timeClient.getFormattedTime();
+    return ((timeClient.getFormattedTime()) + ":" + (String)((int)timeClient.get_millis()));
+
 }
